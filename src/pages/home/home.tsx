@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div className='bg-white py-2 h-screen w-screen overflow-x-hidden'>
-      <div className="bg-gray-white border border-blue-500 border-opacity-25 p-4 py-0 w-[60vw] min-w-[500px] mx-auto rounded-xl shadow-lg h-[95vh] overflow-auto">
+      <div className="bg-gray-white border border-blue-500 border-opacity-25 p-4 py-0 w-[60vw] min-w-[500px] mx-auto rounded-xl shadow-lg h-[95vh] overflow-auto md:w-full md:h-full md:min-w-full">
       {/* Title */}
         <div className="sticky top-0 mb-4 bg-white">
           <header className="bg-white pb-6 pt-4">
