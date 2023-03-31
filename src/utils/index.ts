@@ -22,7 +22,7 @@ export const getNotes = ()=>{
 
 export const saveNote = (note: Note)=>{
     let newNotes = getNotes()
-    newNotes.push(note)
+    newNotes = [note, ...newNotes]
     console.log(newNotes)
     localStorage.setItem('localnotes',JSON.stringify(newNotes))
 }
@@ -34,4 +34,15 @@ export const getNoteById = (id: string)=>{
 export const deleteNote = (id: string)=>{
     const newNotes = getNotes().filter((note)=> note.id !== id)
     localStorage.setItem('localnotes', JSON.stringify(newNotes))
+}
+
+export const completeNote = (id: string)=>{
+    let notes = getNotes()
+    notes.forEach((note)=>{
+        if(note.id === id){
+            note.completed = true
+        }
+    })
+
+    localStorage.setItem('localnotes', JSON.stringify(notes))
 }
