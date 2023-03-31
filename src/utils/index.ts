@@ -23,7 +23,6 @@ export const getNotes = ()=>{
 export const saveNote = (note: Note)=>{
     let newNotes = getNotes()
     newNotes = [note, ...newNotes]
-    console.log(newNotes)
     localStorage.setItem('localnotes',JSON.stringify(newNotes))
 }
 

@@ -21,7 +21,7 @@ const NoteItem = ({note,deleteFunc, completeFunc}: propsType) => {
       </div>
 
       <div className="flex gap-3 mt-3">
-        <button onClick={()=>completeFunc(note.id)} className="bg-blue-500 text-white text-sm py-2 px-3 active:scale-[.98] rounded-lg">Complete</button>
+        {!note.completed && <button onClick={()=>completeFunc(note.id)} className="bg-blue-500 text-white text-sm py-2 px-3 active:scale-[.98] rounded-lg">Complete</button>}
         <button onClick={()=>deleteFunc(note.id)} className="bg-white text-red-400 border-2 border-red-300 text-sm py-2 px-3 active:scale-[.98] rounded-lg">Delete</button>
       </div>
     </div>
