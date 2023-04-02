@@ -44,4 +44,4 @@ export const completeNote = (id: string)=>{
     })
 
     localStorage.setItem('localnotes', JSON.stringify(notes))
-}
+}   
